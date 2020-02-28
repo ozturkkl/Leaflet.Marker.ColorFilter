@@ -10,6 +10,11 @@ Click [here](https://ozturkkl.github.io/Leaflet.Marker.ColorFilter/demo/) to vie
 
 ## Usage
 Fist download the [source file](https://raw.githubusercontent.com/ozturkkl/Leaflet.Marker.ColorFilter/master/src/leaflet-marker-filter.js) and include it in your project after Leaflet.
+```html
+<link rel="stylesheet" href="leaflet.css">
+<script src="leaflet.js"></script>
+<script src="leaflet-marker-filter.js"></script>
+```
 
 Use it while initializing the marker:
 ```js
@@ -26,7 +31,7 @@ const marker = L.marker(CINCINNATI_LAT_LNG, {
 }).addTo(map);
 ```
 
-Use it after the initialization with the method setFilter()
+Use it after the initialization with the method setFilter():
 ```js
 marker.setFilter({
     blur: 0,
@@ -43,3 +48,17 @@ Other useful functions:
 console.log(marker.getFilter())     // Will return the filter object currently applied.
 marker.resetFilter()                // Will reset the marker to its original glory.
 ```
+
+## API
+Send a js object containing one or more of these attributes like shown above in `Usage` section.
+| Filter Name | Example | Default | Unit |
+| --- | --- | --- | --- |
+| **blur** | blur: 2 | **0** | px |
+| **contrast** | contrast: 50 | **100** | % |
+| **greyscale** | greyscale: 10 | **0** | % |
+| **hueRotate** | hueRotate: 30 | **0** | deg |
+| **brightness** | brightness: 150 | **100** | % |
+| **saturate** | saturate: 200 | **100** | % |
+
+## License
+This project is licensed under the MIT License.
