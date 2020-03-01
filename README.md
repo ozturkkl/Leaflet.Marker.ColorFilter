@@ -21,12 +21,16 @@ Use it while initializing the marker:
 const marker = L.marker(CINCINNATI_LAT_LNG, {
     icon: custom_icon,
     filter: {
-        blur: 0,
-        contrast: 100,
-        grayscale: 0,
-        hueRotate: 0,
-        brightness: 100,
-        saturate: 100,
+        blur: "0px",
+        brightness: "100%",
+        contrast: "0%",
+        dropShadow: "0 0 0 black",
+        grayscale: "0%",
+        hueRotate: "0deg",
+        invert: "0%",
+        opacity: "100%",
+        saturate: "100%",
+        sepia: "0%",
     }
 }).addTo(map);
 ```
@@ -34,12 +38,16 @@ const marker = L.marker(CINCINNATI_LAT_LNG, {
 Use it after the initialization with the method setFilter():
 ```js
 marker.setFilter({
-    blur: 0,
-    contrast: 100,
-    grayscale: 0,
-    hueRotate: 0,
-    brightness: 100,
-    saturate: 100,
+    blur: "0px",
+    brightness: "100%",
+    contrast: "0%",
+    dropShadow: "0 0 0 black",
+    grayscale: "0%",
+    hueRotate: "0deg",
+    invert: "0%",
+    opacity: "100%",
+    saturate: "100%",
+    sepia: "0%",
 });
 ```
 
@@ -51,14 +59,18 @@ marker.resetFilter()                // Will reset the marker to its original glo
 
 ## API
 Send a js object containing one or more of these attributes like shown above in `Usage` section.
-| Filter Name | Example | Default | Unit |
-| --- | --- | --- | --- |
-| **blur** | blur: 2 | **0** | px |
-| **contrast** | contrast: 50 | **100** | % |
-| **greyscale** | greyscale: 10 | **0** | % |
-| **hueRotate** | hueRotate: 30 | **0** | deg |
-| **brightness** | brightness: 150 | **100** | % |
-| **saturate** | saturate: 200 | **100** | % |
+| Filter Name | Example Value | Default Value |
+| --- | --- | --- |
+| **blur** | "2px" | **"0px"** |
+| **brightness** | "200%" | **"100%"** |
+| **contrast** | "50%" | **"0%"** |
+| **dropShadow** | "5px 5px 5px black" | **"0 0 0 black"** |
+| **grayscale** | "50%" | **"0%"** |
+| **hueRotate** | "60deg" | **"0deg"** |
+| **invert** | "100%" | **"0%"** |
+| **opacity** | "70%" | **"100%"** |
+| **saturate** | "200%" | **"100%"** |
+| **sepia** | "30%" | **"0%"** |
 
 ## License
 This project is licensed under the MIT License.

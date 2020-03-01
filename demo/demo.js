@@ -31,22 +31,30 @@ carto_layer.addTo(map);
 const marker = L.marker(CINCINNATI_LAT_LNG, {
     icon: custom_icon,
     filter: {
-        blur: 0,
-        contrast: 100,
-        grayscale: 0,
-        hueRotate: 0,
-        brightness: 100,
-        saturate: 100,
+        blur: "0px",
+        brightness: "100%",
+        contrast: "100%",
+        dropShadow: "0 0 0 black",
+        grayscale: "0%",
+        hueRotate: "0deg",
+        invert: "0%",
+        opacity: "100%",
+        saturate: "100%",
+        sepia: "0%",
     }
 }).addTo(map);
 
 marker.setFilter({
-    blur: 0,
-    contrast: 100,
-    grayscale: 0,
-    hueRotate: 0,
-    brightness: 100,
-    saturate: 100,
+    blur: "0px",
+    brightness: "100%",
+    contrast: "0%",
+    dropShadow: "0 0 0 black",
+    grayscale: "0%",
+    hueRotate: "0deg",
+    invert: "0%",
+    opacity: "100%",
+    saturate: "100%",
+    sepia: "0%",
 });
 
 console.log(marker.getFilter())     // Will return the filter object currently applied.
@@ -134,19 +142,19 @@ function createContextMenu() {
     context_menu.setAttribute("id", "context_menu");
 
     addLi(context_menu, "Change Color").addEventListener("click", (e) => {
-        random_degree = Math.floor(Math.random()*360);
+        random_degree = Math.floor(Math.random() * 360);
         marker.setFilter({
-            hueRotate: random_degree,
+            hueRotate: random_degree + "deg",
         })
     });
     addLi(context_menu, "Increase Saturation to 200").addEventListener("click", (e) => {
         marker.setFilter({
-            saturate: 200,
+            saturate: "200%",
         })
     });
     addLi(context_menu, "Decrease Saturation to 50").addEventListener("click", (e) => {
         marker.setFilter({
-            saturate: 50,
+            saturate: "50%",
         })
     });
     addLi(context_menu, "Get Filters").addEventListener("click", (e) => {
