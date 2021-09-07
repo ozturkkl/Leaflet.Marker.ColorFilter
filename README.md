@@ -5,6 +5,8 @@ This plugin is heavily ispired by [xtk93x/Leaflet.TileLayer.ColorFilter](https:/
 
 I needed the same functionality with markers and this plugin was born.
 
+![image](https://user-images.githubusercontent.com/51798197/132268217-6752e243-a9d0-487f-813e-f9f68e2e9c50.png)
+
 ## Demo
 Click [here](https://ozturkkl.github.io/Leaflet.Marker.ColorFilter/demo/) to view the demo.
 
